@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section class="form_Section">
+        <div class="container" id="completed"> 
+            <!-- step one -->
+            <div class="row" id="stepOne">
+                <div class="col-12">
+                    <h1 class="heading">Which property do you want to sell?</h1>
+                </div> 
+                <div class="col">
+                   <div class="property-type"> 
+                      <img src="wohnung.png" alt="Wohnung" id="wohnung_select"> 
+                   </div>
+                </div> 
+                 <div class="col">
+                   <div class="property-type">
+                       <img src="haus.png" alt="Haus"  id="haus_select">
+                   </div>
+                </div> 
+                <!--<div class="col">
+                   <div class="property-type">
+                       <img src="grundstuck.png" alt="" >
+                   </div>
+                </div> 
+                <div class="col">
+                   <div class="property-type">
+                       <img src="gewerbe.png" alt="" >
+                   </div>
+                </div>  -->
+            </div>
+            <!-- step one -->
+            <!-- step two  Wohnstatus  -->
+            <div class="row" id="Wohnstatus">
+                <div class="col-12">
+                    <h1 class="heading">What is your residential status?</h1>
+                </div>
+                <div class="col">
+                   <div class="property-type">
+                       <img src="selbst_bewohunt.png" alt="Selbst Bewohunt" id="selbst_bewohunt">
+                   </div>
+                </div> 
+                <div class="col">
+                   <div class="property-type">
+                       <img src="frei.png" alt="Frei"  id="frei">
+                   </div>
+                </div> 
+                <div class="col">
+                   <div class="property-type">
+                       <img src="vermietet.png" alt="Vermietet"  id="vermietet">
+                   </div>
+                </div> 
+                <div class="col">
+                   <div class="property-type">
+                       <img src="teilweise_vermietet.png" alt="Teilweise Vermietet"  id="teilweise_vermietet">
+                   </div>
+                </div> 
+                <div class="col-12 px-3">
+                  <button id="one_back" class="btn-border ">Back</button>
+                </div> 
+            </div>
+            <!-- step two Wohnstatus  -->
+            <!-- step three wohnung -->
+            <div class="row align-center" id="property_space">
+                <div class="col-12">
+                    <h1 class="heading">What living space does the property have?</h1>
+                </div>
+                <div class="col-2">
+                   <div class="property-type">
+                       <img src="space.png" alt="" >
+                   </div>
+                </div> 
+                <div class="col-10"> 
+                   <div class="slider">
+                      <strong>Wohnfläche</strong>
+                        <input type="range" min="0" value="0" step="1" max="2000" id="range" class="range">
+                        <ul class="flex justify-between">
+                          <li>0 m<sup>2</sup></li>
+                          <li>> 2000 m<sup>2</sup></li>
+                        </ul>
+                   </div>
+                </div> 
+                <div class="col-12  "> 
+                   <h3 id="range_amount">
+                     <strong>Wohnfläche</strong>
+                     <span id="amount">0</span>m<sup>2</sup>
+                   </h3>
+                </div>
+                <div class="col-12 px-3">
+                 <ul class="flex justify-between">
+                   <li>
+                     <button id="two_back" class="btn-border ">Back</button>
+                   </li>
+                   <li>
+                     <button id="one_next" class="btn-border ">Further</button>
+                   </li>
+                 </ul>
+                </div>
+            </div> 
+            <!-- step three wohnung --> 
+
+            <!-- step three wohnung -->
+            <div class="row align-center" id="property_built">
+                <div class="col-12">
+                    <h1 class="heading">Wann wurde die Immobilie gebaut?</h1>
+                </div>
+                <div class="col-2">
+                   <div class="property-type">
+                       <img src="propertybuilt.png" alt="" >
+                   </div>
+                </div> 
+                <div class="col-10"> 
+                   <div class="slider">
+                      <strong>Baujahr</strong>
+                        <input type="range" min="1900" value="0" step="1" max="2021" id="property_built_range" class="range">
+                        <ul class="flex justify-between">
+                          <li>1900</li>
+                          <li>2021</li>
+                        </ul>
+                   </div>
+                </div> 
+                <div class="col-12  "> 
+                   <h3 id="range_amount">
+                     <strong>Baujahr</strong>
+                     <span id="property_built_amount">1900</span>m<sup>2</sup>
+                   </h3>
+                </div>
+                <div class="col-12 px-3">
+                 <ul class="flex justify-between">
+                   <li>
+                     <button id="three_back" class="btn-border ">Back</button>
+                   </li>
+                   <li>
+                     <button id="two_next" class="btn-border ">Further</button>
+                   </li>
+                 </ul>
+                </div>
+            </div> 
+            <!-- step three wohnung --> 
+
+            <!-- step two  condition -->
+            <div class="row justify-center" id="condition">
+                <div class="col-12">
+                    <h1 class="heading">In welchem Zustand befindet sich die Immobile?</h1>
+                </div>
+                <div class="col">
+                   <div class="property-type">
+                       <img src="renovierungs-bedurftig.png" alt="Renovierungs Bedurftig" id="renovierungs_bedurftig">
+                   </div>
+                </div> 
+                <div class="col">
+                   <div class="property-type">
+                       <img src="neuwertig.png" alt="Neuwertig" id="neuwertig">
+                   </div>
+                </div> 
+                <div class="col">
+                   <div class="property-type">
+                       <img src="gepflegt.png" alt="Gepflegt" id="gepflegt">
+                   </div>
+                </div>  
+                <div class="col-12 px-3">
+                  <button id="four_back" class="btn-border ">Back</button>
+                </div> 
+            </div>
+            <!-- step two condition -->
+
+
+
+
+            <!-- step two  condition -->
+             <div class="row justify-center" id="balcony">
+                <div class="col-12">
+                    <h1 class="heading">Gibt es einen Balkon oder eine Terrasse?</h1>
+                </div>
+                <div class="col">
+                   <div class="property-type">
+                       <img src="balkon.png" alt="Balkon" id="balkon">
+                   </div>
+                </div> 
+                <div class="col">
+                   <div class="property-type">
+                       <img src="terrasse.png" alt="Terrasse"  id="terrasse">
+                   </div>
+                </div> 
+                <div class="col">
+                   <div class="property-type">
+                       <img src="balkon_and_terrasse.png" alt="Balkon & Terrasse" id="balkon_and_terrasse" >
+                   </div>
+                </div> 
+                <div class="col">
+                   <div class="property-type">
+                       <img src="weder_noch.png" alt="Weder Noch" id="weder_noch" >
+                   </div>
+                </div>  
+                <div class="col-12 px-3">
+                  <button id="five_back" class="btn-border ">Back</button>
+                </div> 
+            </div>  
+            <!-- step two balcony  -->
+
+
+
+                    <!-- step three wohnung -->
+            <div class="row align-center" id="desired_price">
+                <div class="col-12">
+                    <h1 class="heading">Ihr Wunschpreis</h1>
+                </div> 
+                <div class="col-12"> 
+                   <div class="slider">
+                      <strong>Baujahr</strong>
+                      <select class="form_control" id="desired_price_range">
+                        <option>-choose-</option>
+                        <option value="0€ - 100.000€">0€ - 100.000€</option>
+                        <option value="100.000€ - 200.000€">100.000€ - 200.000€</option>
+                        <option value="200.000€ - 300.000€">200.000€ - 300.000€</option>
+                        <option value="300.000€ - 400.000€">300.000€ - 400.000€</option>
+                        <option value="400.000€ - 500.000€">400.000€ - 500.000€</option>
+                        <option value="500.000€ - 600.000€">500.000€ - 600.000€</option>
+                        <option value="600.000€ - 800.000€">600.000€ - 800.000€</option>
+                        <option value="800.000€ - 1.000.000€">800.000€ - 1.000.000€</option>
+                        <option value="über 1.000.000€">über 1.000.000€</option> 
+                      </select>
+                        
+                   </div>
+                </div> 
+                 
+                <div class="col-12 py-3">
+                 <ul class="flex justify-between">
+                   <li>
+                     <button id="six_back" class="btn-border ">Back</button>
+                   </li>
+                   <li>
+                     <button id="three_next" class="btn-border ">Further</button>
+                   </li>
+                 </ul>
+                </div>
+            </div> 
+            <!-- step three wohnung --> 
+
+
+
+                    <!-- step three wohnung -->
+            <div class="row align-center" id="property_located">
+                <div class="col-12">
+                    <h1 class="heading">In welcher Region befindet sich das Objekt?</h1>
+                </div> 
+                <div class="col-12"> 
+                    <div class="row">
+                      <div class="col-6   region">
+                        <strong>Street, No.</strong>
+                        <input type="" name="" id="StreetNo">
+                        <strong>Postcode</strong>
+                        <input type="" name="" id="Postcode">
+                        <strong>Place</strong>
+                        <input type="" name="" id="Place">
+                      </div>
+                      <div class="col-6">
+                        <img src="map-Converted-1.jpg" alt="map-Converted-1" >
+                      </div>
+                    </div>
+                </div> 
+                 
+                <div class="col-12 py-3">
+                 <ul class="flex justify-between">
+                   <li>
+                     <button id="seven_back" class="btn-border ">Back</button>
+                   </li>
+                   <li>
+                     <button id="four_next" class="btn-border ">Further</button>
+                   </li>
+                 </ul>
+                </div>
+            </div> 
+            <!-- step three wohnung --> 
+
+
+                    <!-- step three wohnung -->
+            <div class="row align-center" id="last_step">
+                <div class="col-12">
+                    <h1 class="heading">Letzter Schritt</h1>
+                </div> 
+                <div class="col-12"> 
+                    <div class="row">
+                      <div class="col-6   region">
+                        <strong>Vorname</strong>
+                        <input type="" name="" id="Firstname">
+                        <strong>E-mail Adresse</strong>
+                        <input type="" name="" id="E_mail_address"> 
+                      </div>
+                      <div class="col-6   region">
+                        <strong>Nachname</strong>
+                        <input type="" name="" id="Surname">
+                        <strong>Telefon Number</strong>
+                        <input type="" name="" id="Telephone_number"> 
+                      </div>
+                      <div class="col-12   checkbox "> 
+                        <input type="checkbox" name="" id="chck">
+                        <label>Ich willige zur Kontaktaufnahme und Zusendung von Informationen ein. Weitere Angaben, auch zu meinem Widerrufsrecht, habe ich in der Datenschutzerklärung gelesen.</label>
+                      </div>
+                      
+                    </div>
+                </div> 
+                 
+                <div class="col-12 py-3">
+                 <ul class="flex justify-between">
+                   <li>
+                     <button id="eight_back" class="btn-border ">Back</button>
+                   </li>
+                   <li>
+                     <button id="five_next" class="btn-border ">Further</button>
+                   </li>
+                 </ul>
+                </div>
+            </div> 
+            <!-- step three wohnung --> 
+
+
+
+
+            <!-- step two  haus -->
+            <!-- <div class="row" id="haus">
+                <div class="col-12">
+                    <h1 class="heading">Details of your home</h1>
+                </div>
+                <div class="col">
+                   <div class="property-type">
+                       <img src="einfamilienhaus.png" alt="" >
+                   </div>
+                </div> 
+                <div class="col">
+                   <div class="property-type">
+                       <img src="mehrfamilienhaus.png" alt="" >
+                   </div>
+                </div> 
+                <div class="col">
+                   <div class="property-type">
+                       <img src="reihenhaus.png" alt="" >
+                   </div>
+                </div> 
+                <div class="col">
+                   <div class="property-type">
+                       <img src="doppelhaushalfte.png" alt="" >
+                   </div>
+                </div> 
+            </div> -->
+            <!-- step two haus -->
+            <!-- step two  grundstuck -->
+           <!--  <div class="row justify-center" id="grundstuck">
+                <div class="col-12">
+                    <h1 class="heading">Information about your property</h1>
+                </div>
+                <div class="col">
+                   <div class="property-type">
+                       <img src="baugrundstuck.png" alt="" >
+                   </div>
+                </div> 
+                <div class="col">
+                   <div class="property-type">
+                       <img src="gewerbegrundstuck.png" alt="" >
+                   </div>
+                </div> 
+                <div class="col">
+                   <div class="property-type">
+                       <img src="agrarflache.png" alt="" >
+                   </div>
+                </div> 
+            </div> -->
+            <!-- step two grundstuck -->
+            <!-- step two  gewerbe -->
+           <!--  <div class="row justify-center" id="gewerbe">
+                <div class="col-12">
+                    <h1 class="heading">Information about your commercial property</h1>
+                </div>
+                <div class="col">
+                   <div class="property-type">
+                       <img src="buro.png" alt="" >
+                   </div>
+                </div> 
+                <div class="col">
+                   <div class="property-type">
+                       <img src="gastgewerbe.png" alt="" >
+                   </div>
+                </div> 
+                <div class="col">
+                   <div class="property-type">
+                       <img src="halle_produktion.png" alt="" >
+                   </div>
+                </div>
+                <div class="col">
+                   <div class="property-type">
+                       <img src="hotel_pension.png" alt="" >
+                   </div>
+                </div> 
+            </div> -->
+            <!-- step two gewerbe -->
+        </div>
+    </section>
+    
+
+    <script src="js.js"></script>
+</body>
+</html>

@@ -1,0 +1,231 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+  
+}
+.flex{
+    list-style: none;
+    display: flex;
+}
+.justify-center{
+    justify-content: center;
+}
+.justify-between{
+
+    justify-content: space-between;
+}
+.align-center{
+    align-items: center;
+}
+.form_Section{
+    background-color: aliceblue;
+    padding: 50px 30px;
+}
+
+.form_Section .container{
+    max-width: 960px;
+    margin: auto;
+    min-height: 400px; 
+    border: 5px solid #C3A03F;
+    border-radius: 10px;
+    padding: 50px 30px;
+    background: #ffffff;
+box-shadow:  30px 30px 61px #e0e0e0,
+             -30px -30px 61px #ffffff;
+}
+
+.form_Section .container .row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.form_Section img{
+    max-width: 100%;
+}
+ 
+ .col{
+    width: 25%;
+    padding: 10px;
+} 
+.col-2{
+    
+    width: 20%;
+    padding: 10px;
+}
+.col-6{
+
+    width: 50%;
+    padding: 10px;
+}
+.col-10{
+    width: 80%;
+    padding: 10px;
+}
+.form_Section .col .property-type{ 
+border: 2px solid #C3A03F; 
+border-radius: 5px;
+transition-duration: 0.3s;
+cursor: pointer;
+}
+.form_Section .col .property-type:hover,
+.form_Section .col .property-type:focus,
+.form_Section .col .property-type:active{
+    
+ box-shadow: 0px 0px 11px #d1d1d1f7;
+} 
+.form_Section .col-12{
+
+    width: 100%;
+    padding: 0 10px;
+}
+.heading{
+    font-size: 3em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+input[type="range"]{
+    width: 100%;
+}
+
+#Wohnstatus  {
+    display: none;
+}
+#property_built{
+    display: none;
+
+}
+ #property_space,#condition,#balcony,#desired_price,#property_located,#last_step {
+    display: none;
+}
+.btn-border{
+    border-color: rgb(195, 160, 63);
+    color: rgb(195, 160, 63);
+        padding: 10px 20px;
+            box-shadow: 4px 4px 20px rgb(0 0 0 / 6%);
+    transition: all 0.2s;
+    border-radius: 4px;
+    border: 1px solid rgb(195, 160, 63);
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857;
+    margin-bottom: 0; 
+    text-align: center;
+    background-color: transparent;
+}
+.px-3{
+    padding:0 15px
+} 
+
+.py-3{
+    padding: 15px 0
+} 
+
+#range_amount{ 
+    text-align: center;
+    font-size: 28px;
+    color: #666;
+    font-weight: 500;
+}
+#range_amount strong{
+    display: block;
+    font-weight: 500;
+}
+#amount{
+
+}
+.slider strong{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    display: block;
+}
+ul.flex{}
+ul.flex li{
+    font-size: 20px;
+    font-weight: 500;
+}
+ul.flex li sup{}
+
+ 
+.form_control{
+      font-size: 13px;
+    color: rgb(0, 0, 0);
+    height: 42px;
+    line-height: 33px;
+    background: white;
+    border-color: rgb(221, 221, 221);
+    border-radius: 3px;
+    border: 1px solid #ddd;
+    color: #777;
+    display: block;
+    line-height: 1.42857;
+    padding: 6px 12px;
+    width: 100%!important;
+}
+
+.range {
+  -webkit-appearance: none; 
+  width: 100%;
+  height: 10px;
+  background: #d3d3d300;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  border-radius: 30px;
+    border: 1px solid #c3a03f; 
+}
+
+.range:hover {
+  opacity: 1;
+}
+
+.range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 45px;
+  height: 20px;
+  background: #c3a03f;
+  cursor: pointer;
+  border-radius: 30px;
+}
+
+.range::-moz-range-thumb {
+  width: 45px;
+  height: 20px;
+  background: #c3a03f;
+  cursor: pointer;  
+  border-radius: 30px;
+}
+
+button:focus{
+    outline: none;
+}
+
+.region{}
+.region strong{
+  font-size: 16px;
+    color: rgb(195, 160, 63);
+}
+.region input{
+      font-size: 16px;
+    color: rgb(0, 0, 0);
+    background: white;
+    border-color: black;
+    height: 42px;
+    line-height: 33px;
+    border-radius: 3px;
+    border: 1px solid #ddd;
+    color: #777;
+    display: block;
+    line-height: 1.42857;
+    padding: 6px 12px;
+    width: 100%!important;
+
+    margin-bottom: 15px;
+}
