@@ -72,6 +72,7 @@ function clickImg(select,show,hide){
 				document.getElementById(select).addEventListener('click',function(){
 					document.getElementById(show).style.display = "flex";
 					document.getElementById(hide).style.display = "none";
+
 				});
 			}
 			goBack('one_back','stepOne','Wohnstatus');
@@ -148,14 +149,7 @@ slider("property_built_range","property_built_amount");
 	 console.log($Firstname);
 	 console.log($Surname);
 	 console.log($E_mail_address);
-	 console.log($Telephone_number);
-
-	 function sendMail() {
-					    var link = 'mailto:faridrony55@gmail.com?subject=Message from '
-					             +document.getElementById('email_address').value
-					             +'&body='+document.getElementById('email_address').value;
-					    window.location.href = "index.html";
-					}
+	 console.log($Telephone_number); 
 
 
 	 document.getElementById("five_next").style.display = "none";
@@ -163,3 +157,22 @@ slider("property_built_range","property_built_amount");
  	document.getElementById("completed").innerHTML = "<h1>All DOne</h1>";
 
 });
+
+document.getElementById("five_next").addEventListener('click',function(){
+
+	var name = 'hello';
+ 	var email = 'yes'; 
+	$.post("send-info.php",{
+ 			name1:name,email1:email
+ 		},
+ 		function(data){
+ 			document.getElementById("returnmessage").innerHTML = data;
+ 			 
+ 			if(data=="message has been sent"){
+ 				$("#form")[0].reset();
+ 			} 
+ 		});
+
+});
+
+ 
