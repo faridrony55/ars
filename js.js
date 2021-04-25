@@ -158,21 +158,21 @@ slider("property_built_range","property_built_amount");
 
 });
 
-document.getElementById("five_next").addEventListener('click',function(){
+ 
 
-	var name = 'hello';
- 	var email = 'yes'; 
-	$.post("send-info.php",{
+ $(function(){
+ 	$("#five_next").click(function(){
+ 		var name = 'hello';
+ 		var email = 'yes'; 
+ 		$("#returnmessage").empty(); 
+ 		$.post("send-info.php",{
  			name1:name,email1:email
  		},
  		function(data){
- 			document.getElementById("returnmessage").innerHTML = data;
- 			 
+ 			$("#returnmessage").append(data);
  			if(data=="message has been sent"){
- 				$("#form")[0].reset();
+ 				//$("#form")[0].reset();
  			} 
  		});
-
-});
-
- 
+ 	});
+ });
