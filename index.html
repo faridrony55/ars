@@ -10,12 +10,12 @@
 <body>
 
     <section class="form_Section">
-        <div class="container" id="completed"> 
         	<p id="returnmessage"></p>
+        <div class="container" id="completed"> 
             <!-- step one -->
             <div class="row" id="stepOne">
                 <div class="col-12">
-                    <h1 class="heading">Which property do you want to sell?</h1>
+                    <h1 class="heading">Welche Immobilie möchten Sie verkaufen?</h1>
                 </div> 
                 <div class="col">
                    <div class="property-type"> 
@@ -27,22 +27,22 @@
                        <img src="haus.png" alt="Haus"  id="haus_select">
                    </div>
                 </div> 
-                <!--<div class="col">
+                 <div class="col">
                    <div class="property-type">
-                       <img src="grundstuck.png" alt="" >
+                       <img src="grundstuck.png" alt="Grundstuck" id="grundstuck">
                    </div>
                 </div> 
                 <div class="col">
                    <div class="property-type">
-                       <img src="gewerbe.png" alt="" >
+                       <img src="gewerbe.png" alt="Gewerbe" id="gewerbe">
                    </div>
-                </div>  -->
+                </div>  
             </div>
             <!-- step one -->
             <!-- step two  Wohnstatus  -->
             <div class="row" id="Wohnstatus">
                 <div class="col-12">
-                    <h1 class="heading">What is your residential status?</h1>
+                    <h1 class="heading">Welcher Wohnstatus liegt vor?</h1>
                 </div>
                 <div class="col">
                    <div class="property-type">
@@ -72,7 +72,7 @@
             <!-- step three wohnung -->
             <div class="row align-center" id="property_space">
                 <div class="col-12">
-                    <h1 class="heading">What living space does the property have?</h1>
+                    <h1 class="heading">Welche Wohnfläche besitzt das Objekt ?</h1>
                 </div>
                 <div class="col-2">
                    <div class="property-type">
@@ -304,7 +304,7 @@
                       </div>
                       <div class="col-12   checkbox "> 
                         <input type="checkbox" name="" id="chck">
-                        <label>Ich willige zur Kontaktaufnahme und Zusendung von Informationen ein. Weitere Angaben, auch zu meinem Widerrufsrecht, habe ich in der Datenschutzerklärung gelesen.</label>
+                        <label for="chck">Ich willige zur Kontaktaufnahme und Zusendung von Informationen ein. Weitere Angaben, auch zu meinem Widerrufsrecht, habe ich in der Datenschutzerklärung gelesen.</label>
                       </div>
                       
                     </div>
@@ -325,83 +325,195 @@
 
 
 
+ 
 
-            <!-- step two  haus -->
-            <!-- <div class="row" id="haus">
+            <div class="row" id="HomeDetails">
                 <div class="col-12">
-                    <h1 class="heading">Details of your home</h1>
+                    <h1 class="heading">Angaben zu Ihrem Haus</h1>
                 </div>
                 <div class="col">
                    <div class="property-type">
-                       <img src="einfamilienhaus.png" alt="" >
+                       <img src="einfamilienhaus.png" alt="Einfamilien Haus" id="einfamilienhaus">
                    </div>
                 </div> 
                 <div class="col">
                    <div class="property-type">
-                       <img src="mehrfamilienhaus.png" alt="" >
+                       <img src="mehrfamilienhaus.png" alt="Mehrfamilien Haus"  id="mehrfamilienhaus">
                    </div>
                 </div> 
                 <div class="col">
                    <div class="property-type">
-                       <img src="reihenhaus.png" alt="" >
+                       <img src="reihenhaus.png" alt="Reihen Haus"  id="reihenhaus">
                    </div>
                 </div> 
                 <div class="col">
                    <div class="property-type">
-                       <img src="doppelhaushalfte.png" alt="" >
+                       <img src="doppelhaushalfte.png" alt="Doppel Haushalfte"  id="doppelhaushalfte">
                    </div>
                 </div> 
-            </div> -->
-            <!-- step two haus -->
-            <!-- step two  grundstuck -->
-           <!--  <div class="row justify-center" id="grundstuck">
+                <div class="col-12 px-3">
+                  <button id="haus_one_back" class="btn-border ">Back</button>
+                </div> 
+            </div>
+
+
+
+
+            <!-- step three wohnung -->
+            <div class="row align-center" id="property_size">
                 <div class="col-12">
-                    <h1 class="heading">Information about your property</h1>
+                    <h1 class="heading">Welche Fläche besitzt das Grundstück?</h1>
                 </div>
-                <div class="col">
+                <div class="col-2">
                    <div class="property-type">
-                       <img src="baugrundstuck.png" alt="" >
+                       <img src="Zeichenflache.png" alt="" >
                    </div>
                 </div> 
-                <div class="col">
-                   <div class="property-type">
-                       <img src="gewerbegrundstuck.png" alt="" >
+                <div class="col-10"> 
+                   <div class="slider">
+                      <strong>Grundstücksgröße</strong>
+                        <input type="range" min="0" value="0" step="1" max="2021" id="property_size_range" class="range">
+                        <ul class="flex justify-between">
+                          <li>0</li>
+                          <li>2500</li>
+                        </ul>
                    </div>
                 </div> 
-                <div class="col">
-                   <div class="property-type">
-                       <img src="agrarflache.png" alt="" >
-                   </div>
-                </div> 
-            </div> -->
-            <!-- step two grundstuck -->
-            <!-- step two  gewerbe -->
-           <!--  <div class="row justify-center" id="gewerbe">
+                <div class="col-12  "> 
+                   <h3 id="range_amount">
+                     <strong>Grundstücksgröße</strong>
+                     <span id="property_size_amount">0</span>m<sup>2</sup>
+                   </h3>
+                </div>
+                <div class="col-12 px-3">
+                 <ul class="flex justify-between">
+                   <li>
+                     <button id="size_three_back" class="btn-border ">Back</button>
+                   </li>
+                   <li>
+                     <button id="size_two_next" class="btn-border ">Further</button>
+                   </li>
+                 </ul>
+                </div>
+            </div> 
+            <!-- step three wohnung --> 
+
+
+            <!-- step two  Information about your property -->
+            <div class="row justify-center" id="propertyInformation">
                 <div class="col-12">
-                    <h1 class="heading">Information about your commercial property</h1>
+                    <h1 class="heading">Angaben zu Ihrem Grundstück</h1>
                 </div>
                 <div class="col">
                    <div class="property-type">
-                       <img src="buro.png" alt="" >
+                       <img src="baugrundstuck.png" alt="Baugrundstuck" id="baugrundstuck">
                    </div>
                 </div> 
                 <div class="col">
                    <div class="property-type">
-                       <img src="gastgewerbe.png" alt="" >
+                       <img src="gewerbegrundstuck.png" alt="Gewerbegrundstuck" id="gewerbegrundstuck">
                    </div>
                 </div> 
                 <div class="col">
                    <div class="property-type">
-                       <img src="halle_produktion.png" alt="" >
+                       <img src="agrarflache.png" alt="Agrarflache" id="agrarflache">
                    </div>
+                </div>  
+                <div class="col-12 px-3">
+                  <button id="propertyInfo_four_back" class="btn-border ">Back</button>
+                </div> 
+            </div>
+            <!-- step two Information about your property -->
+            <!-- step two  property be built on -->
+            <div class="row justify-center" id="propertybuilton">
+                <div class="col-12">
+                    <h1 class="heading">Ist das Grundstück bebaubar?</h1>
                 </div>
                 <div class="col">
                    <div class="property-type">
-                       <img src="hotel_pension.png" alt="" >
+                       <img src="kurzfristingbebaubar.png" alt="Kurzfristing Bebaubar" id="kurzfristingbebaubar">
                    </div>
                 </div> 
-            </div> -->
-            <!-- step two gewerbe -->
+                <div class="col">
+                   <div class="property-type">
+                       <img src="eingeschrankt.png" alt="Eingeschrankt" id="eingeschrankt">
+                   </div>
+                </div> 
+                <div class="col">
+                   <div class="property-type">
+                       <img src="nicht_bebaubar.png" alt="Nicht Bebaubar" id="nicht_bebaubar">
+                   </div>
+                </div> 
+                <div class="col">
+                   <div class="property-type">
+                       <img src="unbekannt.png" alt="Unbekannt" id="unbekannt">
+                   </div>
+                </div>  
+                <div class="col-12 px-3">
+                  <button id="propertybuilton_four_back" class="btn-border ">Back</button>
+                </div> 
+            </div>
+            <!-- step two property be built on -->
+ 
+
+
+
+
+            <!-- step two  commercial property -->
+            <div class="row justify-center" id="commercialproperty">
+                <div class="col-12">
+                    <h1 class="heading">Angaben zu Ihrer Gewerbeimmobilie</h1>
+                </div>
+                <div class="col">
+                   <div class="property-type">
+                       <img src="buro.png" alt="Buro" id="buro">
+                   </div>
+                </div> 
+                <div class="col">
+                   <div class="property-type">
+                       <img src="gastgewerbe.png" alt="Gastgewerbe" id="gastgewerbe">
+                   </div>
+                </div> 
+                <div class="col">
+                   <div class="property-type">
+                       <img src="halle_Produktion.png" alt="halle / Produktion" id="halle_Produktion">
+                   </div>
+                </div> 
+                <div class="col">
+                   <div class="property-type">
+                       <img src="hotel_pension.png" alt="Hotel Pension" id="hotel_pension">
+                   </div>
+                </div>  
+                <div class="col-12 px-3">
+                  <button id="commercialproperty_four_back" class="btn-border ">Back</button>
+                </div> 
+            </div>
+            <!-- step two property be built on -->
+            <!-- step two  What is the usage status? -->
+            <div class="row justify-center" id="usagestatus">
+                <div class="col-12">
+                    <h1 class="heading">Welcher Nutzungsstatus liegt vor?</h1>
+                </div>
+                <div class="col">
+                   <div class="property-type">
+                       <img src="frei.png" alt="Frei" id="frei_status">
+                   </div>
+                </div> 
+                <div class="col">
+                   <div class="property-type">
+                       <img src="vermietet.png" alt="Vermietet" id="vermietet_status">
+                   </div>
+                </div> 
+                <div class="col">
+                   <div class="property-type">
+                       <img src="teilweise_vermietet.png" alt="Teilweise Vermietet" id="teilweise_vermietet_status">
+                   </div>
+                </div>    
+                <div class="col-12 px-3">
+                  <button id="usagestatus_four_back" class="btn-border ">Back</button>
+                </div> 
+            </div>
+            <!-- step two property be built on -->
         </div>
     </section>
     
